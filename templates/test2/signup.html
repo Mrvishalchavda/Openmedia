@@ -1,0 +1,85 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.80.0">
+    <title>Welcome to the site</title>
+
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="https://getbootstrap.com/docs/4.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      .forflex{
+        display: flex;
+      }
+      .sr-onlye {
+       width: 125px
+      }
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/4.6/examples/sign-in/signin.css" rel="stylesheet">
+    <style>
+      .form1{
+        margin: auto;
+      }
+
+    </style>
+  </head>
+  <body class="text-center">
+    
+
+  <form class="form1" method="POST" action="/signup">
+  {% csrf_token %}
+  <img class="mb-4" src="https://getbootstrap.com/docs/4.6/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+  <h1 class="h3 mb-3 font-weight-normal">Please sign UP</h1>
+  <div class="forflex">
+  <label for="input" class="sr-onlye">username</label>
+  <input id="input" name="username" class="form-control" placeholder="user name" required autofocus>
+  </div>
+  <div class="forflex">
+  <label for="input" class="sr-onlye">Emailid</label>
+  <input id="input" name="email" class="form-control" placeholder="emailid" required autofocus>
+  </div>
+  <div class="forflex">
+  <label for="inputPassword" class="sr-onlye">Password</label>
+  <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
+  </div>
+  {% comment %} <div class="checkbox mb-3"> {% endcomment %}
+  
+  <div class="forflex">
+  <label for="inputPassword" >confirm Password</label>
+  <input type="password" id="coninputPassword" name ="conpassword" class="form-control" placeholder="conPassword" required>
+  {% comment %} <div class="checkbox mb-3"> {% endcomment %}
+  </div>
+  <button class="btn btn-lg btn-primary btn-block submit"  type="submit">Sign UP</button>
+  <p class="mt-5 mb-3 text-muted">&copy; 2017-2021</p>
+</form>
+
+
+    
+  </body>
+</html>
