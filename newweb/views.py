@@ -17,7 +17,9 @@ def home(request):
 
 def login(request):
     return render(request,"login.html")
-def register(request):
+
+
+def register(request):      
     print("ask for page")
     if request.method == 'POST':
         if 'userregister' in request.POST:
