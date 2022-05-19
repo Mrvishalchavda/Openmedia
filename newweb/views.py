@@ -13,7 +13,7 @@ def home(request):
             return HttpResponse("user login sucessfully")
         elif 'journalistlogin' in request.POST:
             return HttpResponse("journalist login sucessfully")
-    return render(request,"home.html")
+    return render(request,"final/fhome.html")
 
 
 def loginuser(request):
