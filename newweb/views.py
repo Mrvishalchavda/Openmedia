@@ -37,11 +37,15 @@ def register(request):
     print("ask for page")
     if request.method == 'POST':
         if 'userregister' in request.POST:
+            print("1")
+            print(request.POST)
             # messages.success(request, 'user profile maked login now')
             return render(request,"register.html")
         elif 'journalistregister' in request.POST:
+            print("2")
             # messages.success(request, ' journalist profile maked login now')
             return render(request,"register.html")
+            print(request.POST)
         # print("if working")
         # username = request.POST.get("username")
         # password = request.POST.get("password")
@@ -58,4 +62,6 @@ def register(request):
         # messages.success(request, 'profile maked login now')
         # return render(request, "login.html")
     else:
+        print("3")
+        print(request.POST)
         return render(request, "register.html")
